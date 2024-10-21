@@ -4,7 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suplementos Deportivos</title>
-    <style> /* Reset básico */
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Suplementos Deportivos</h1>
+        <nav>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="productos">
+            <h2>Nuestros Productos</h2>
+            <div class="producto">
+                <img src="https://example.com/proteina-whey.jpg" alt="Proteína Whey" />
+                <h3>Proteína Whey</h3>
+                <p>Ideal para recuperación muscular después del ejercicio.</p>
+                <p>Precio: $29.99</p>
+            </div>
+            <div class="producto">
+                <img src="https://example.com/creatina.jpg" alt="Creatina" />
+                <h3>Creatina</h3>
+                <p>Aumenta la fuerza y mejora el rendimiento en entrenamientos intensos.</p>
+                <p>Precio: $19.99</p>
+            </div>
+            <div class="producto">
+                <img src="https://example.com/bcaa.jpg" alt="Aminoácidos BCAA" />
+                <h3>Aminoácidos BCAA</h3>
+                <p>Ayuda a reducir la fatiga y mejorar la recuperación.</p>
+                <p>Precio: $24.99</p>
+            </div>
+        </section>
+
+        <section id="beneficios">
+            <h2>Beneficios de los Suplementos</h2>
+            <ul>
+                <li>Mejora el rendimiento deportivo.</li>
+                <li>Ayuda en la recuperación muscular.</li>
+                <li>Soporta el crecimiento muscular.</li>
+                <li>Proporciona nutrientes esenciales.</li>
+            </ul>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="#" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Suplementos Deportivos. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -13,14 +82,14 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #eaeaea;
     color: #333;
     line-height: 1.6;
 }
 
 /* Estilos del encabezado */
 header {
-    background: linear-gradient(135deg, #ff6b6b, #f7b733);
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -67,19 +136,25 @@ main {
     width: 300px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    text-align: center;
 }
 
 .producto:hover {
     transform: scale(1.05);
 }
 
+.producto img {
+    width: 100%;
+    border-radius: 5px;
+}
+
 .producto h3 {
-    color: #ff6b6b;
+    color: #4caf50;
 }
 
 /* Sección de beneficios */
 #beneficios {
-    background: #eaeaea;
+    background: #c8e6c9;
     padding: 20px;
     border-radius: 5px;
 }
@@ -90,7 +165,7 @@ main {
 }
 
 #beneficios ul li {
-    background: #ff6b6b;
+    background: #4caf50;
     color: #fff;
     margin: 5px 0;
     padding: 10px;
@@ -124,7 +199,7 @@ form textarea {
 }
 
 form button {
-    background: #ff6b6b;
+    background: #4caf50;
     color: #fff;
     border: none;
     padding: 10px;
@@ -135,7 +210,7 @@ form button {
 }
 
 form button:hover {
-    background: #f7b733;
+    background: #66bb6a;
 }
 
 /* Estilos del pie de página */
@@ -148,70 +223,3 @@ footer {
     bottom: 0;
     width: 100%;
 }
-</style>
-</head>
-<body>
-    <header>
-        <h1>Suplementos Deportivos</h1>
-        <nav>
-            <ul>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#beneficios">Beneficios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="productos">
-            <h2>Nuestros Productos</h2>
-            <div class="producto">
-                <h3>Proteína Whey</h3>
-                <p>Ideal para recuperación muscular después del ejercicio.</p>
-                <p>Precio: $29.99</p>
-            </div>
-            <div class="producto">
-                <h3>Creatina</h3>
-                <p>Aumenta la fuerza y mejora el rendimiento en entrenamientos intensos.</p>
-                <p>Precio: $19.99</p>
-            </div>
-            <div class="producto">
-                <h3>Aminoácidos BCAA</h3>
-                <p>Ayuda a reducir la fatiga y mejorar la recuperación.</p>
-                <p>Precio: $24.99</p>
-            </div>
-        </section>
-
-        <section id="beneficios">
-            <h2>Beneficios de los Suplementos</h2>
-            <ul>
-                <li>Mejora el rendimiento deportivo.</li>
-                <li>Ayuda en la recuperación muscular.</li>
-                <li>Soporta el crecimiento muscular.</li>
-                <li>Proporciona nutrientes esenciales.</li>
-            </ul>
-        </section>
-
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <form action="#" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
-                
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Suplementos Deportivos. Todos los derechos reservados.</p>
-    </footer>
-</body>
-</html>
-
